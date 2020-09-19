@@ -1,0 +1,68 @@
+
+.topImage {
+    height: 400px;
+    width: 600px;
+    margin: 25px auto;
+    background-image: url('../images/webDev.jpg');
+    background-repeat: no-repeat;
+    
+    object-fit: scale-down;
+    
+   
+
+    
+}
+
+.parent {
+    background-image: url('../images/myPostsPic.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 10px 20px rgba(22, 15, 15, 0.26);
+
+    position: relative;
+    z-index: 1;
+    height: 280px;
+    width: 450px;
+    margin: 15px auto;
+
+}
+
+/* had to put that top property on the absolute div or else it goes out of lin below <p> tags */
+.overlay {
+    position: absolute;
+    z-index: 2;
+    top:45;
+    display: flex;
+    justify-content: space-around;
+    height: 210px;
+    width: 450px;
+    opacity: 0;
+    transition: 1s ease-in-out ;
+    background: rgba(252, 251, 251, 1);
+    box-shadow: 0 10px 20px rgba(247, 241, 241, 0.26);
+    /* border: 2px solid yellow; */
+}
+
+.overlay:hover {
+    opacity: 1;
+    
+}
+
+.parent1 h1 {
+    background: rgba(128, 128, 128, 0.9);
+    color: yellow;
+    padding:7px;
+    font-size: 22px;
+    
+}
+
+.overlay  h4 {
+    width: 80%;
+    margin: 20px auto;
+    
+
+}
+
+.overlay a {
+ 
+}

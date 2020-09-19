@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    font-family:  'Open Sans', sans-serif;
+
+  
+
+}
+main h1 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.images {
+    width: 80vw;
+    margin:15px auto;
+    text-align: left;
+}
+
+.intro {
+    width: 100vw;
+    
+}
+
+.intro p  {
+    width:80vw;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #484848;
+   
+
+   
+
+}
