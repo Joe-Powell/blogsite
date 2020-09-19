@@ -6,10 +6,7 @@
     background-image: url('../images/webDev.jpg');
     background-repeat: no-repeat;
     
-    object-fit: scale-down;
     
-   
-
     
 }
 
@@ -36,6 +33,7 @@
     justify-content: space-around;
     height: 210px;
     width: 450px;
+    margin-bottom: 10px ;
     opacity: 0;
     transition: 1s ease-in-out ;
     background: rgba(252, 251, 251, 1);
@@ -66,3 +64,67 @@
 .overlay a {
  
 }
+
+
+
+
+
+
+
+@media (max-width: 525px){
+
+    .topImage {
+        height: 200px;
+        width: 300px;
+        margin: 25px auto;
+        background-image: url('../images/webDev.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+    }
+
+    .parent {
+        background-image: url('../images/myPostsPic.PNG');
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 10px 20px rgba(22, 15, 15, 0.26);
+    
+        position: relative;
+        z-index: 1;
+        height:300px ;
+        width: 250px;
+        margin: 15px auto;
+    
+    }
+    
+
+
+
+    .overlay {
+        position: absolute;
+        z-index: 2;
+        top:45;
+        display: flex;
+        justify-content: space-around;
+        height: fit-content;
+        min-height: 210px;
+        width: 250px;
+        opacity: 0;
+        transition: 1s ease-in-out ;
+        background: rgba(252, 251, 251, 1);
+       
+         box-shadow: 0 10px 20px rgba(22, 15, 15, 0.26);
+       
+    }
+    
+    
+    
+    
+       
+    }
+    
+    
+    
+    
+    
+    

@@ -8,7 +8,7 @@
         edit your post if it's the same user, Upload photos, and much more. This
         is a project I made while learning the basics of C.R.U.D which stands for
         Create, Read, Update, and Delete. This project is not so much about the 
-        visual exprience, but what it can do with the data entered into a database.
+        visual experience, but what it can do with the data entered into a database.
         The thing I like about Php is that it's very dynamic wihout having to install
         so many dependencies. Php is here to stay with it always staying up to date and making
         improvements. Below is a link to the project itself, go ahead and create an account
