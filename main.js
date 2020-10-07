@@ -18,7 +18,7 @@ const menuNav = document.getElementById('menuNav');
 
 $(document).ready(() => {
 
-    $('#menuNav, h2').on('click', () => {
+    $('#menuNav').on('click', () => {
         $('#nav').slideToggle(1000);
     });
 

@@ -20,14 +20,14 @@
         as upload a profile picture. When you first sign up there will be a default emoji 
         until you upload your first imgage as your profile image.
 
-
+        </p>
 
     
     
     
     
         <a href='http://myblogs.live/loginSocialMediaPosts/' target='_blank'>Click here for site </a>
-  </p>
+ 
 </div>   
 
 

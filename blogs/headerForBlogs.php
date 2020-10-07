@@ -23,7 +23,6 @@
             </a>
             <a href="../webDev.php">
                 <li>Web Development</li>
-            </a>
-            <li>Health & Fitness</li>
-        </ul>
+                </a>
+        
     </nav>
