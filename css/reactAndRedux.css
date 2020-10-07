@@ -11,14 +11,10 @@
 
 }
 
-.containBlog {
-    width:100vw;
 
-  
-}
 
 .containBlog {
-    width: 55vw;
+    width: 65vw;
     max-width: 1150px;
     margin: 35px auto;
     padding: 10px;
@@ -30,7 +26,7 @@
 
    .containBlog ul {
        display: inline-block;
-       width: 55vw;
+       width: 100%;
        max-width: 1150px;
        font-size: 1rem;
        font-family: sans-serif;
@@ -64,7 +60,7 @@
        
     
     .image {
-        background-image: url('../images/reactRedux.jpeg');
+        background-image: url('../images/redux.png');
         background-repeat: no-repeat;
         background-size: 100%;
     
@@ -77,12 +73,12 @@
     }  
     
     
-    .containBlog p{
-        width: 85vw;
-        max-width: 1150px;
+    .containBlog {
+        width: 75vw;
+      
         margin: 35px auto;
         padding: 10px;
-        line-height: 1.5rem;
+        line-height: 1.6rem;
         font-size: 1rem;
         font-family: sans-serif;
     

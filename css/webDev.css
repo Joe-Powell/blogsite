@@ -101,11 +101,25 @@ center, Else if width of div is less than screen do margin: auto */
 
 }
 
+                /* /////////////1300 and below ///////////////////////*/
+
+@media (max-width: 1300px) {
+
+    .containBlogs {
+        width : 560px;
+    }
 
 
-        /* ////////////////1150 and below////////////////////////// */
 
-@media (max-width: 1150px){
+
+}
+
+
+
+
+                   /* ////////////////850 and below////////////////////////// */
+
+@media (max-width: 850px){
     .containBlogs {
         display: flex;
         flex-wrap: wrap;
@@ -120,7 +134,7 @@ center, Else if width of div is less than screen do margin: auto */
 
 
 
-    /* ////////////////665 and below////////////////////////// */
+                        /* ////////////////665 and below////////////////////////// */
 @media (max-width: 665px){
 
     .topImage {
@@ -136,7 +150,8 @@ center, Else if width of div is less than screen do margin: auto */
     .containBlogs {
         display: flex;
         flex-wrap: wrap;
-        max-width: 420px;
+        width: 420px;
+
         margin: auto;
 
     }
@@ -216,16 +231,25 @@ center, Else if width of div is less than screen do margin: auto */
 
 
 
-    /* ////////////////440 and below////////////////////////// */
+                                    /* ////////////////500 and below////////////////////////// */
 
-    @media (max-width: 440px){
+    @media (max-width: 500px){
     
         .containBlogs {
             display: flex;
             flex-wrap: wrap;
-            width: 210px;
+            width: 100vw;
             margin: auto;
     
+        }
+
+        .parent {
+            width: 85vw;
+            margin: 12px auto;
+        }
+
+        .overlay {
+            width: 85vw;
         }
     
     
