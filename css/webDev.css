@@ -45,29 +45,8 @@ center, Else if width of div is less than screen do margin: auto */
     height:260px ;
     width: 250px;
      margin: 15px 15px; 
+     
 
-}
-
-/* had to put that top property on the absolute div
- or else it goes out of lin below <p> tags */
-.overlay {
-    position: absolute;
-    z-index: 2;
-    top:62px;
-    
-    height: 200px;
-    width: 250px;
-    
-    opacity: 0;
-    transition: 1s ease-in-out ;
-    background: rgba(252, 251, 251, 1);
-    box-shadow: 0 10px 20px rgba(247, 241, 241, 0.26);
-    /* border: 2px solid yellow; */
-}
-
-.overlay:hover {
-    opacity: 1;
-    
 }
 
 .parent h1 {
@@ -79,26 +58,52 @@ center, Else if width of div is less than screen do margin: auto */
     
 }
 
-.parent1 h2 {
-     background-image: url('../images/myPostsPic.PNG');
-    background-repeat: no-repeat;
-    background-size: cover; 
-    height:190px;
+.parent h2 {
+  height:190px;
 
 } 
 
-.parent2 h2 {
-    height:210px;
+/* had to put that top property on the absolute div
+ or else it goes out of line below <p> tags */
+.overlay {
+    position: absolute;
+    z-index: 2;
+    top:72px;
+    height: 190px;
+    width: 250px;
+   
+    transition-property: background color ;
+    transition-duration: 2s;
+     background: rgba(252, 251, 251, 1); 
+    box-shadow: 0 10px 20px rgba(247, 241, 241, 0.26);
+   
 }
 
+.overlay:hover {
+    background: rgba(128, 128, 128, 0.1);
 
+  
+    
+}
 
 .overlay h4 {
-    
-    
     padding: 5px;
+    height: 87%;
     
 
+}
+
+.overlay a {
+text-decoration: none ;
+padding-left: 67%;
+color: blue;
+transition-property: color;
+transition-duration: 1s;
+
+}
+
+.overlay a:hover {
+    color:gold;
 }
 
                 /* /////////////1300 and below ///////////////////////*/
@@ -125,6 +130,32 @@ center, Else if width of div is less than screen do margin: auto */
         flex-wrap: wrap;
         width: 560px;
         margin: auto;
+    }
+
+    .overlay {
+     transition-property: color border;
+    transition-duration: 3s;
+    
+    }
+
+    .overlay h4 {
+        padding: 5px;
+        height: 83%;
+        
+    
+    }
+
+    .overlay a {
+        text-decoration: none ;
+        padding-left: 55%;
+        padding-bottom: 7px;
+        color: red;
+        
+        }
+
+    .overlay:hover{
+        /* border: 1px solid rgb(29, 6, 6); */
+        /* color:gold; */
     }
 
 
@@ -217,9 +248,15 @@ center, Else if width of div is less than screen do margin: auto */
     
     }
 
-    .overlay span {
-        display: none;
-    }
+    .overlay a {
+        text-decoration: none ;
+        padding-left: 70%;
+        padding-bottom: 7px;
+        color: red;
+        
+        }
+
+   
     
     
     

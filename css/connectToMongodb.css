@@ -3,17 +3,17 @@
     padding:0px;
 }
 
-body {
+body{
     background: rgb(221, 207, 207);
 
 }
 
 .image {
-    background-image: url('../images/redux.png');
+    background-image: url('../images/mongodb.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 170px;
-    width: 410px;
+    height: 160px;
+    width: 280px;
     margin: 15px auto;
     box-shadow: 0 5px 15px rgba(29, 22, 22, 0.26); 
 
@@ -22,73 +22,37 @@ body {
 
 
 .containBlog {
-    width: 400px;
-   
+    width: 350px;
+    
     margin: 35px auto;
     padding: 10px;
-    line-height: 1.4rem;
-    font-size: 1rem;
+    line-height: 1.2rem;
+    font-size: .9rem;
     font-family: sans-serif;
 
    }
 
-   .intro {
-    margin-bottom: 30px;
 
-   }
 
-   .containBlog ul {
-       display: inline-block;
-       width: 100%;
-       max-width: 1150px;
-       font-size: 1rem;
-       font-family: sans-serif;
-       list-style-position: inside;
-
-       margin:0;
-       padding: 0;
- 
-    
-
-      
-   }
-
-   .containBlog ul h4 {
+   .containBlog h4 {
        display: inline-block;
        width: fit-content;
    }
 
-   .containBlog ul li {
-    
-      padding-right: 0px;
-      list-style: none;
-     
-     
-   }
 
 
 
 
-
-   
-   
-   
-   
-   
-   
-   
-   
-   
-  @media (max-width: 525px){
+   @media (max-width: 525px){
        
     
     .image {
-        background-image: url('../images/redux.png');
+        background-image: url('../images/mongodb.jpg');
         background-repeat: no-repeat;
         background-size: 100%;
     
-        height: 200px;
-        width: 300px;
+        height: 140px;
+        width: 260px;
         margin: 15px auto;
     
         box-shadow: 0 5px 15px rgba(29, 22, 22, 0.26); 
@@ -109,3 +73,5 @@ body {
        
        
 }
+
+ 
