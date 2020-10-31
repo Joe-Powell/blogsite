@@ -26,11 +26,12 @@ body{
     
     margin: 35px auto;
     padding: 10px;
-    line-height: 1.2rem;
+    line-height: 1rem;
     font-size: .9rem;
     font-family: sans-serif;
 
    }
+
 
 
 
@@ -58,10 +59,16 @@ body{
         box-shadow: 0 5px 15px rgba(29, 22, 22, 0.26); 
     
     }  
+
+    img {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
     
     
     .containBlog {
-        width: 75vw;
+        width: 85vw;
       
         margin: 35px auto;
         padding: 10px;

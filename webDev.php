@@ -35,10 +35,10 @@
 </div>
 
   <div class="parent">
-    <h1><i class="fab fa-react"></i> Connect To Mongodb</h1>
+    <h1> Connect To Mongodb</h1>
     <h2></h2>
     <div class="overlay">
-      <h4> This is on the 5 basic steps of connecting mongdb using the mongoDB Atlas
+      <h4> This is on the basic steps of connecting mongdb 
          to your node/express projects. This is for concepts only in order to break it 
          down to it's simplist form.
     
