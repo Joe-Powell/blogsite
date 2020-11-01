@@ -24,9 +24,5 @@
             <a href="about.php">
                 <li>About</li>
             </a>
-            <a href="webDev.php">
-                <li>Web Development</li>
-            </a>
-           
         </ul>
     </nav>
