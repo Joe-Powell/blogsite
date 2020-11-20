@@ -50,13 +50,13 @@
 
 
   <div class="parent">
-    <h1></h1>
+    <h1><i class="fab fa-react"></i> Host a React.js project</h1>
     <h2></h2>
     <div class="overlay">
-      <h4>
+      <h4>Learn how to host your react.js project in your shared hosting account.
         
       </h4>
-      <a href='#'> Read more</a>
+      <a href='./blogs/hostYourReactProject.php'> Read more</a>
     </div>
 
     
