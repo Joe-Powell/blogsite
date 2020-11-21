@@ -9,14 +9,14 @@
      
 <p>
         <h4>First </h4><br>
-        <!-- <img src='../images/'  width="300px" height="200px" alt='Some Text' /><br>  -->
+        <!-- <img src='../images/'  width="200px" alt='Some Text' /><br> -->
 
 
       </p><br>
 
      <p>
         <h4>Second </h4><br>
-        <!-- <img src='../images/'  width="300px" height="200px" alt='Some Text' /><br>  -->
+        <!-- <img src='../images/'  width="200px" alt='Some Text' /><br> -->
 
 
 
@@ -24,13 +24,13 @@
 
      <p>
         <h4>Third </h4><br>
-        <!-- <img src='../images/'  width="300px" height="200px" alt='Some Text' /><br>  -->
+        <!-- <img src='../images/'  width="200px" alt='Some Text' /><br> -->
       
      </p><br>
 
      <p>
         <h4>Fourth </h4><br>
-        <!-- <img src='../images/'  width="300px" height="200px" alt='Some Text' /><br>  -->
+        <!-- <img src='../images/'  width="200px" alt='Some Text' /><br> -->
          
       </p>
    

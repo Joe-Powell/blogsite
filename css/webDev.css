@@ -5,6 +5,7 @@
 
 body {
     background: rgb(221, 207, 207);
+    background: #92d8f8;
     box-sizing: border-box;
 }
 
@@ -50,8 +51,8 @@ center, Else if width of div is less than screen do margin: auto */
 }
 
 .parent h1 {
-    background: rgba(128, 128, 128, 0.9);
-    color: yellow;
+    background: #03a9f4;
+    color: white;
     padding:7px;
     font-size: 18px;
     height: 72px;
@@ -80,7 +81,8 @@ center, Else if width of div is less than screen do margin: auto */
 }
 
 .overlay:hover {
-    background: rgba(128, 128, 128, 0.1);
+    background: #92d8f8;
+   
 
   
     
@@ -96,14 +98,14 @@ center, Else if width of div is less than screen do margin: auto */
 .overlay a {
 text-decoration: none ;
 padding-left: 67%;
-color: blue;
+color: red;
 transition-property: color;
 transition-duration: 1s;
 
 }
 
 .overlay a:hover {
-    color:gold;
+    color:black;
 }
 
                 /* /////////////1300 and below ///////////////////////*/
@@ -202,8 +204,8 @@ transition-duration: 1s;
     }
 
     .parent h1 {
-        background: rgba(128, 128, 128, 0.9);
-        color: yellow;
+        background: #03a9f4;
+        color: white;
         padding:7px;
         font-size: 16px;
         

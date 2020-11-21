@@ -9,10 +9,10 @@
 
 nav {
  display: flex;
- background:grey;
+ background: #03a9f4;
  height:100px;
  width:100vw;
- color:yellow;
+ color:white;
  align-items: center;
  justify-content: space-between;
 
@@ -43,7 +43,7 @@ nav ul li {
 }
 
 nav ul a {
-    color:yellow;
+    color:white;
     text-decoration:none;
 
 
@@ -80,16 +80,16 @@ ion-icon {
         border: none;
         height:fit-content;
         width:100vw;
-        color:yellow;
+        color:white;
         align-items: start;
-        background:grey;
+        background:#03a9f4;
 
        
        }
        
        
        nav h2 {
-        background:rgb(128, 128, 128);
+        background:#03a9f4;
         padding-left:10px;
          width: 100%;
     
@@ -139,9 +139,9 @@ nav ul li {
     }
 
        
-       ion-icon {
+       nav ion-icon {
         display: block;
-        background:grey;
+        background:#03a9f4;
         color:black;
         width:50px;
         font-size:45px;
