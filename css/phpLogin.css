@@ -1,0 +1,37 @@
+
+* {
+    font-family:monospace;
+}
+
+.containBlog {
+    padding: 0px 5vw;
+}
+
+.containBlog p {
+    max-width: 600px;
+}
+
+.thePre {
+    max-width: fit-content;
+    font-size: small;
+    line-height: 20px;
+    
+    }
+
+
+
+
+
+
+
+
+
+@media(max-width:550px) {
+    .thePre {
+    width: 90vw;
+    font-size:13px;
+    line-height: 20px;
+    }
+
+
+}

@@ -28,15 +28,10 @@ center, Else if width of div is less than screen do margin: auto */
 
 .containBlogs {
     width:fit-content;
-    height:fit-content;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 
-    
-  
-
-   
 }
 
 .parent {
@@ -48,7 +43,6 @@ center, Else if width of div is less than screen do margin: auto */
     width: 250px;
      margin: 15px 15px; 
      
-
 }
 
 .parent h1 {
@@ -114,7 +108,9 @@ transition-duration: 1s;
 @media (max-width: 1300px) {
 
     .containBlogs {
-        width : 560px;
+        width: 860px;
+        margin: auto;
+        text-align: center;
     }
 
 

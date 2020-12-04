@@ -21,7 +21,7 @@
             the App in Provider tags and give it one property which is the store. Provider must be imported in the same file with createStore from react-redux. </li>
             <li><h4>Actions</h4> are functions you create that fire out the Dispatch information to the reducers. These Actions are in their own folder and get imported into 
             the file they will be used in. First they get passed into the connect's second paremeter which then makes them availabe fo use in the props of that component.
-            tOnce the action / actions are imported it gets assigned to an event suh as onClick, don'tt forget to use props.actonName. You can also use destructuring in the 
+            Once the action / actions are imported it gets assigned to an event suh as onClick, don'tt forget to use props.actonName. You can also use destructuring in the 
             props parameter using curly bracets so you don't have to use the props keyword.</li>
             <li><h4>Dispatch</h4> is an object fired  from an action to the reducer that give information about the type and the payload.
             Type usually is a string or a variable that has a string telling it what kind of action for example increase or decrease. Payload is usually the info passed into 

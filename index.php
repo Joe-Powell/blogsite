@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-<link rel="stylesheet" href="./css/webDev.css">
+<link rel="stylesheet" href="./css/index.css">
 
 
 <div class="topImage"></div>
@@ -57,6 +57,22 @@
         
       </h4>
       <a href='./blogs/hostYourReactProject.php'> Read more</a>
+    </div>
+
+    
+  </div>
+
+
+  <div class="parent">
+    <h1><i class="fab fa-react"></i> PHP Login Registration system</h1>
+    <h2></h2>
+    <div class="overlay">
+      <h4>Learn how build a PHP login/Registration system from scratch step by step. 
+        This is the basics I didn't apply security measures or form validation much 
+        so you can focus on the most basics first to get a foundation to build on.
+        
+      </h4>
+      <a href='./blogs/phpLogin.php'> Read more</a>
     </div>
 
     
