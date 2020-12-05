@@ -7,12 +7,21 @@
     padding: 0px 5vw;
 }
 
+.containBlog .heading {
+    width:fit-content;
+    margin: auto;
+    margin-bottom:55px;
+}
+
 .containBlog p {
     max-width: 600px;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin:5px 0px 50px 0px ;
 }
 
 .thePre {
-    max-width: fit-content;
+    width:fit-content;
     font-size: small;
     line-height: 20px;
     
@@ -27,8 +36,16 @@
 
 
 @media(max-width:550px) {
+   
+    .containBlog .heading {
+        width:80vw;
+        margin: auto;
+        margin-bottom:55px;
+    }
+
+
     .thePre {
-    width: 90vw;
+    max-width: 90vw;
     font-size:13px;
     line-height: 20px;
     }

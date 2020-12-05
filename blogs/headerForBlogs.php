@@ -21,7 +21,7 @@
 
 <body>
     <nav>
-        <h2>CodeDriven </h2>
+    <h2>Code<span>Driven</span></h2>
         <ion-icon id='menuNav' name="menu-outline"></ion-icon>
         <ul id="nav">
             <a href='../index.php'>
