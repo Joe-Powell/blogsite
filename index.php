@@ -79,7 +79,18 @@
   </div>
 
 
+  <div class="parent">
+    <h1>Visual studio Shortcuts</h1>
+    <h2></h2>
+    <div class="overlay">
+      <h4>
+        Here are some of my favorite shortcuts when using Visual Studio help you speed things up.
+      </h4>
+      <a href='./blogs/visualStudioShortcuts.php'> Read more </a>
+    </div>
 
+    
+  </div>
 
 
 

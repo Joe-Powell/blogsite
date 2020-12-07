@@ -1,0 +1,29 @@
+* {
+box-sizing: border-box;
+margin:0px;
+padding:0px;
+font-family: Arial,Verdana,Tahoma;
+}
+
+h1 {
+    padding-left:25px;
+}
+
+.containAll {
+    padding:10px 0px 0px 20px;
+    line-height: 25px;
+}
+
+.containAll p {
+    font-size: 13px;
+    width:370px;
+}
+
+.containAll span {
+    color:#03a9f4;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+
+
