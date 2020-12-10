@@ -18,7 +18,7 @@ $(document).ready(() => {
 
 
 
-////////LOGIN/REGISTER  look in index.php, header.php, ///////////////////////////////////////////////////////////////
+////////LOGIN/REGISTER buttons  header.php, ///////////////////////////////////////////////////////////////
 
 const loginToggle = document.querySelector('.loginToggle');
 const signUpToggle = document.querySelector('.signUpToggle');

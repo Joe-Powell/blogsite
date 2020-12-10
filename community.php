@@ -34,28 +34,7 @@
 
 ?>
 
-<div class="login/register">
 
-<form class='loginForm loginFormToggle' action='index.php' method='post'>
-    <h2>Login</h2>
-    <input type="text" id="username" name='username'>
-    <input type="password"  id="password" name='password' placeholder="Password">
-    <button type="submit" class="btn btn-primary" name='submitLogin'>Submit</button>   
- </form>
-
-
-
-
-<form class='registerForm registFormToggle' action='index.php' method='post'>
-        <h2 >Register your new account </h2>
-        <input type="email" id= "email" name='email' placeholder="email" required>
-        <input type="text" id="username" name='username' placeholder="username" required >
-        <input type="password" id="password" name='password' placeholder="Password" required >
-        <button type="submit"  name='submitRegistration'>Signup</button>
-    </form>
-
-
-</div>
 
 
 <?php if(isset($_SESSION['uid'])) { ?>
