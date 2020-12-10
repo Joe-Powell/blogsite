@@ -47,7 +47,7 @@ for (let i = 0; i < editCommBtn.length; i++) {
 
 
 
-////////LOGIN/REGISTER  look in index.php, header.php, also  in main.. but errors from main////////////////////
+////////LOGIN/REGISTER  look in index.php, header.php, ////////////////////
 
 const loginToggle = document.querySelector('.loginToggle');
 const signUpToggle = document.querySelector('.signUpToggle');

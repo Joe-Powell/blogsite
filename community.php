@@ -58,13 +58,17 @@
 </div>
 
 
-
+<?php if(isset($_SESSION['uid'])) { ?>
 <h2>Comments/questions</h2>
-    <!-- <form action='handle_comments.php' method='post'> -->
     <form>
-    <input class='comment' type='text' name='comment'>
-    <input class='submitComment' type='submit' name='submitComment' value='Submit'>
+        <input class='comment' type='text' name='comment'>
+        <input type='hidden' name='UserIdFromSessionHidden' value='<?php echo $_SESSION['uid'] ?>'>
+        <input class='submitComment' type='submit' name='submitComment' value='Submit'>
     </form>
+
+    <?php }  ?>
+
+
 
 
 
@@ -87,7 +91,9 @@ while($comments = $result->fetch_assoc() ) { ?>
 <div class='commentContainer'>
     <p><?php echo $comments['id']; ?></p>
     <p><?php echo $comments['comment']; ?></p>
-    <h4 class='editCommBtn'>Edit</h4>
+    <?php if(isset($_SESSION['uid']) && $_SESSION['uid'] == $post->inputId) { ?>
+        <h4 class='editCommBtn'>Edit</h4>
+    <?php }  ?>
     <form id='commEditForm' class='toggleForm'> 
         <i class="far fa-times-circle"></i>
         <input class='update' name='update' type='text' value='<?php echo $comments['comment']; ?>'> 

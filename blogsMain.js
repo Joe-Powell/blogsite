@@ -43,7 +43,7 @@ XoutOfRegister.addEventListener('click', () => { registerForm.classList.toggle('
 
 
 ///////REGISTER LOGIN FETCH SEND TO handle_comments.php from main js fetch ////////////////////////////////////////////////////////
-/// different paths from fetch in blogs and index pages
+// this is wht blogsMain.js because fetch wont match
 const theRegisterForm = document.getElementById('registerForm');
 const submitRegistrationBtn = document.getElementById('submitRegistration');
 
@@ -58,7 +58,7 @@ submitRegistrationBtn.addEventListener('click', (e) => {
     data.append('password', theRegisterForm.registerPassword.value);
 
 
-    fetch('./blogs/handle_comments.php', {
+    fetch('./handle_comments.php', {
         method: 'POST',
         body: data
     })

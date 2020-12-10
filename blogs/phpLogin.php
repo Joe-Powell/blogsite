@@ -114,8 +114,8 @@
  &lt;form class='loginForm' action='index.php' method='post'>
     &lt;h2>Login&lt;/h2>
     &lt;input type="text" id="username" name='username'>
-    &lt;input type="password"  id="password" name='password' placeholder="Password">
-    &lt;button type="submit" class="btn btn-primary" name='submitLogin'>Submit&lt;/button>   
+    &lt;input type="password" id="password" name='password' placeholder="Password">
+    &lt;button type="submit" name='submitLogin'>Submit&lt;/button>   
  &lt;/form>
     </code></pre>
 
@@ -128,7 +128,7 @@
          </p>
         <h2>6 Handle the submission of login  </h2><br>
 
-    <pre class='thePre'><code class="php"> 
+    <pre class='thePre'><code class="html"> 
     &lt;?php session_start();       
  if(isset($_POST['submitLogin'])) {
     $username = $_POST['username'];
@@ -151,24 +151,36 @@
 >
 </code></pre>
         
-         <p>
-
-
-
-         </p>
-        <h2>Fourth </h2><br>
-        <!-- <img src='../images/'  width="200px" alt='Some Text' /><br> -->
+     
+        <h2></h2><br>
+        
          <p>
         The superglobal $_POST is waiting for the submitLogin button to be clicked and then 
         makes sure the fields are filled out. The query checks if the users table has one row
          with the same username and password as was entered into the fields that were submitted.
          Then we fetch the result as an associative array and make a $_SESSION = the users id
-         of that user of that row in the database. 
+         of that user in the database. 
 
 
          </p>
+
+
+         <h2>    To make edit button available for logged in user </h2><br>
+<pre class='thePre'><code class="html"> 
+
+&lt;?php if(isset($_SESSION['uid']) && $_SESSION['uid'] == $user['inputId']) { ?>
+    &lt;div>
+        &lt;button  class='editBtn'>Edit&lt;/button>
+    &lt;/div>
+
+    &lt;?php }  ?>
+
+</code></pre>
    
 </div>
+
+
+
 
 
 

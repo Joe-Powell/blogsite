@@ -39,12 +39,13 @@
 
     <!--loginRegisterForm"> buttons in navbar header..-------------------------------------------->
 
-<form class='loginForm ' action='index.php' method='post'>
+<form class='loginForm ' >
   <div class='formContents'>
     <h2>Login</h2> 
-    <input type="text" id="username" name='username' placeholder="username">
-    <input type="password"  id="password" name='password' placeholder="Password">
-    <button type="submit" class="btn btn-primary" name='submitLogin'>Submit</button>   
+    <input type="text" id="loginUsername" name='loginUsername' placeholder="username">
+    <input type="password"  id="loginPassword" name='loginPassword' placeholder="Password">
+    <button type="submit"  name='submitLogin'>Submit</button> 
+    
   </div>
   <i class="fas fa-times"></i>
 </form>
@@ -52,14 +53,14 @@
 
 
 
-<form class='registerForm ' action='index.php' method='post'>
+<form class='registerForm ' id='registerForm'>
 
   <div class='formContents'>
       <h2 >Register your new account </h2>
+      <input type="text" id="registerUsername" name='registerUsername' placeholder="username" required >
       <input type="email" id= "email" name='email' placeholder="email" required>
-      <input type="text" id="username" name='username' placeholder="username" required >
-      <input type="password" id="password" name='password' placeholder="Password" required >
-      <button type="submit"  name='submitRegistration'>Signup</button>
+      <input type="password" id="registerPassword" name='registerPassword' placeholder="Password" required >
+      <button type="submit" id='submitRegistration'  name='submitRegistration'>Signup</button>
   </div>
   <i class="fas fa-times"></i>
     </form>
