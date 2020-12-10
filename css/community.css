@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+    font-family: Arial,Verdana,Tahoma;
+    }
+
+.commentsContainerAll {
+   
+}    
+
+
+.commentContainer {
+padding: 10px;
+}
+
+
+.editCommBtn {
+    color:red;
+    width: fit-content;
+    transition: 2s;
+}
+.editCommBtn:hover {
+    border-bottom: 1px solid black;
+}
+.toggleForm {
+    display:none;
+    transition: 2s;
+}

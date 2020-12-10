@@ -2,6 +2,38 @@
 <link rel="stylesheet" href="./css/index.css">
 
 
+<!--loginRegisterForm"> buttons in navbar header..-------------------------------------------->
+
+<form class='loginForm ' action='index.php' method='post'>
+  <div class='formContents'>
+    <h2>Login</h2> 
+    <input type="text" id="username" name='username' placeholder="username">
+    <input type="password"  id="password" name='password' placeholder="Password">
+    <button type="submit" class="btn btn-primary" name='submitLogin'>Submit</button>   
+  </div>
+  <i class="fas fa-times"></i>
+</form>
+
+
+
+
+<form class='registerForm ' action='index.php' method='post'>
+
+  <div class='formContents'>
+      <h2 >Register your new account </h2>
+      <input type="email" id= "email" name='email' placeholder="email" required>
+      <input type="text" id="username" name='username' placeholder="username" required >
+      <input type="password" id="password" name='password' placeholder="Password" required >
+      <button type="submit"  name='submitRegistration'>Signup</button>
+  </div>
+  <i class="fas fa-times"></i>
+    </form>
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+
 <div class="topImage"></div>
 
 
@@ -93,33 +125,6 @@
   </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php include 'footer.php'; ?>

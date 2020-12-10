@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+     box-sizing: border-box; 
     font-family: 'Segoe UI';
     margin: 0;
     padding:0;
@@ -21,19 +21,22 @@ nav {
 
 nav h2 {
   padding-left:10px;
+  padding-bottom: 10px;
   font-size: 30px;
   color:rgb(74, 90, 74);
+
 
 }
 
 nav h2 span {
     color: orange;
+    
 }
 
 
 nav ul {
     width: fit-content;
-    padding:0px 100px 0px 0px;
+    padding:0px 20px 0px 0px;
     display:inline-block;
     }
 
@@ -47,6 +50,7 @@ nav ul li {
     
 }
 
+
 nav ul a {
     color:white;
     text-decoration:none;
@@ -55,8 +59,8 @@ nav ul a {
 }
 
 
-nav ul li:hover {
-    color:black;
+nav ul a li:hover {
+    color:rgb(74, 90, 74);
     transition: 1s ;
 
 }
@@ -65,23 +69,43 @@ ion-icon {
     display: none;
 }
 
+nav ul .btns {
+    text-align: right;
+}
+
+nav ul .btns li {
+    display: inline-block;
+    
+    margin-right: 30px;
+}
+
+
+
+/*  for the buttons in the NAVBAR */
+.loginToggle, .signUpToggle {
+    
+     width:fit-content;
+    height: fit-content; 
+    padding: 0px 1px 1px 2px; 
+    margin-right: 10px;
+    font-size: 30px;
+
+    /* border: white solid 0.5px; */
+    color:rgb(74, 90, 74);
+   transition: 1s;
+}
+.loginToggle:hover, .signUpToggle:hover {
+    color:orange;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 650px) {
     nav {
-        display: flex;
-        flex-direction: column;
+        display: inline-block;
+       
         border: none;
         height:fit-content;
         width:100vw;
@@ -94,46 +118,44 @@ ion-icon {
        
        
        nav h2 {
+           display: inline-block;
         background:#03a9f4;
         padding-left:10px;
-         width: 100%;
+         width: 85%;
     
        }
        
        
-       nav ul {
+    nav ul {
         width: 100%;
         padding:10px;
         padding-left:10px;
-        display: flex;
-        display:none;
+        display:block;  
        
-        color:yellow;
-        flex-direction: column;
+        color:white;
+        flex-direction: row;
            
     }
 
-    nav ul a {
-        color:yellow;
+    nav ul a li{
+        display: inline-block;
+        width:fit-content;
+        color:orange;
         text-decoration:none;
        
-       
-       
-    
-    
+       }
+
+
+    nav ul .btns {
+        text-align: left;
+    }
+ 
+
+    nav ul .btns li {
+        display: inline-block;
+        margin-right: 30px;
     }
 
-   
-nav ul li {
-           list-style: none;
-           
-           font-weight: 700;
-           line-height: 35px;
-           letter-spacing: 1px;
-           display:block;
-          
-       
-         }
 
 
 
@@ -145,14 +167,42 @@ nav ul li {
 
        
        nav ion-icon {
-        display: block;
+        display: inline-block;
         background:#03a9f4;
         color:black;
-        width:50px;
+        width:35px;
         font-size:45px;
        
     }
+
+
+    .loginToggle, .signUpToggle {
+    
+        width:40px;
+       height: fit-content; 
+       padding: 0px 1px 1px 2px;
        
+       font-size: 20px;
+       border: none;
+       color:rgb(74, 90, 74);
+   }
+       
+
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+
+    nav ul a li{
+        display: block;
+        width:fit-content;
+        color:orange;
+        text-decoration:none;
+       
+       }
+
 
 
 }

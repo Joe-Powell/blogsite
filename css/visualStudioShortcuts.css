@@ -11,12 +11,13 @@ h1 {
 
 .containAll {
     padding:10px 0px 0px 20px;
-    line-height: 25px;
+    line-height: 20px;
 }
 
 .containAll p {
     font-size: 13px;
     width:370px;
+  
 }
 
 .containAll span {

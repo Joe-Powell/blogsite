@@ -26,5 +26,12 @@
             <a href="about.php">
                 <li>About</li>
             </a>
+            <a href="community.php">
+                <li>Community</li>
+            </a>
+                <div class='btns'>
+                    <li class='loginToggle'>Login</li>
+                    <li class='signUpToggle'>Signup</li>
+                </div>  
         </ul>
     </nav>

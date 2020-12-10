@@ -30,6 +30,11 @@
             <a href="../about.php">
                 <li>About</li>
             </a>
+            <a href="../community.php">
+                <li>Community</li>
+            </a>
+            <li class='loginToggle'>Login</li>
+            <li class='signUpToggle'>Signup</li>
         </ul>      
         
     </nav>
