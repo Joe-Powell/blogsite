@@ -1,7 +1,7 @@
 <?php
             $servername = "localhost";
             $username = "root";
-            $password = "12345";
+            $password = "";
             $db = 'handle_blog_comments';
             $conn = new mysqli($servername, $username, $password, $db);
 
