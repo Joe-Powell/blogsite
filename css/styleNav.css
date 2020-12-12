@@ -8,13 +8,12 @@
 
 
 nav {
- display: flex;
+ display: inline-block;
  background: #03a9f4;
  height:100px;
  width:100vw;
  color:white;
- align-items: center;
- justify-content: space-between;
+ 
 
 }
 
@@ -67,6 +66,7 @@ nav ul a li:hover {
 
 ion-icon {
     display: none;
+   
 }
 
 nav ul .btns {
@@ -82,8 +82,27 @@ nav ul .btns li {
 
 
 /*  for the buttons in the NAVBAR */
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100vw;
+    
+}
+.logoutForm {
+    display: inline-block;
+    vertical-align: top;  
+    width: fit-content;
+    padding-right: 10px;
+}
 .logOutBtn {
-    color: red;
+    
+    background-color: red;
+    border:black 1px solid;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 8px;
     
 }
 
@@ -126,7 +145,7 @@ nav ul .btns li {
            display: inline-block;
         background:#03a9f4;
         padding-left:10px;
-         width: 85%;
+         width: fit-content;
     
        }
        
@@ -172,11 +191,12 @@ nav ul .btns li {
 
        
        nav ion-icon {
+       
         display: inline-block;
         background:#03a9f4;
         color:black;
         width:35px;
-        font-size:45px;
+        font-size:30px;
        
     }
 

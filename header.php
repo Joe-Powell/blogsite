@@ -100,8 +100,21 @@ if(isset($_POST['logoutBtn'])) {
 
 <body>
     <nav>
+        
+        
+        <div class="topRow">
         <h2>Code<span>Driven</span></h2>
+        <div>
         <ion-icon id='menuNav' name="menu-outline"></ion-icon>
+
+        <?php if(isset($_SESSION['uid'])){ ?>
+            <form class='logoutForm'>
+                <button type='submit' class='logOutBtn'> Logout</button>
+            </form>
+        <?php  } ?>
+        </div>
+
+        </div>
         <ul id="nav">
             <a href='index.php'>
                 <li>Home</li>
@@ -112,11 +125,7 @@ if(isset($_POST['logoutBtn'])) {
             <a href="community.php">
                 <li>Community</li>
             </a>
-            <?php if(isset($_SESSION['uid'])){ ?>
-                <form class='logoutForm'>
-            <button type='submit' class='logOutBtn'> Logout</button>
-            </form>
-        <?php  } ?>
+          
         <?php if(!isset($_SESSION['uid'])){ ?>
                 <div class='btns'>
                     <li class='loginToggle'>Login</li>

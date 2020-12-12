@@ -20,8 +20,14 @@
 
         }else{
         
+            $sqlUsers="SELECT * FROM users WHERE id ='$userid' ";
+            $result = $conn->query($sqlUsers);
+            $Theuser =  $result->fetch_assoc();   
 
-         $sql= "INSERT INTO comment_table (comment, userid) VALUES ('$comment','$userid')";
+            $name= $Theuser['username']; // get username from users table to put in every post 
+
+
+         $sql= "INSERT INTO comment_table (comment, userid, name) VALUES ('$comment','$userid', '$name')";
          $result = $conn->query($sql);
 
 
@@ -42,12 +48,14 @@ so we say, if the current _$session['uid'] == $comments['userid'] then display e
  -->
 
 <?php if(isset($_SESSION['uid'])) { ?>
+    <div class='commentForm'>
 <h2>Comments/questions</h2>
     <form id='Form'>
-        <input class='comment' type='text' name='comment'>
+        <input class='commentField' type='text' name='comment'>
         <input type='hidden' name='userid' value='<?php echo $_SESSION['uid'] ?>'>
-        <input class='submitComment' type='submit' name='submitComment' value='Submit'>
+        <input class='submitCommentBtn' type='submit' name='submitComment' value='Submit'>
     </form>
+</div>
 
     <?php }  ?>
 
@@ -66,7 +74,10 @@ so we say, if the current _$session['uid'] == $comments['userid'] then display e
 
 while($comments = $result->fetch_assoc()) { ?>
 <div class='commentContainer'>
-    <p><?php echo $comments['userid']; ?></p>
+    <h3><?php echo $comments['name']; ?></h3>
+    <p class='date'><?php echo $comments['date']; ?></p><br>
+   
+    <!-- <p><?php // echo $comments['userid']; ?></p> -->
     <p><?php echo $comments['comment']; ?></p>
 
     <?php if(isset($_SESSION['uid']) && $_SESSION['uid'] == $comments['userid']) { ?>
@@ -75,8 +86,8 @@ while($comments = $result->fetch_assoc()) { ?>
 
     <form id='commEditForm' class='toggleForm'> 
         <i class="far fa-times-circle"></i>
-        <input class='update' name='update' type='text' value='<?php echo $comments['comment']; ?>'> 
-        <input type='submit' value='Update'>
+        <input class='updateInputField' name='update' type='text' value='<?php echo $comments['comment']; ?>'> 
+        <input class='submitUpdateBtn' type='submit' value='Update'>
     </form> 
 
 </div>   
