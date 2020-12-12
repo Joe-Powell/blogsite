@@ -28,9 +28,12 @@ const registerForm = document.querySelector('.registerForm');
 const XoutOfLogin = document.querySelector('.loginForm .fa-times');
 const XoutOfRegister = document.querySelector('.registerForm .fa-times');
 
-loginToggle.addEventListener('click', () => { loginForm.classList.toggle('loginFormToggle'); loginForm.classList.toggle('loginForm') })
-signUpToggle.addEventListener('click', () => { registerForm.classList.toggle('registerFormToggle'); registerForm.classList.toggle('registerForm') })
 
+// if else because they dissapear when logged in and BRINGS UP ERROR....
+if (loginToggle && signUpToggle) {
+    loginToggle.addEventListener('click', () => { loginForm.classList.toggle('loginFormToggle'); loginForm.classList.toggle('loginForm') })
+    signUpToggle.addEventListener('click', () => { registerForm.classList.toggle('registerFormToggle'); registerForm.classList.toggle('registerForm') })
+}
 
 XoutOfLogin.addEventListener('click', () => { loginForm.classList.toggle('loginFormToggle'); loginForm.classList.toggle('loginForm') })
 XoutOfRegister.addEventListener('click', () => { registerForm.classList.toggle('registerFormToggle'); registerForm.classList.toggle('registerForm') })
@@ -42,13 +45,15 @@ XoutOfRegister.addEventListener('click', () => { registerForm.classList.toggle('
 
 
 
-///////REGISTER LOGIN FETCH SEND TO handle_comments.php from main js fetch ////////////////////////////////////////////////////////
-// this is wht blogsMain.js because fetch wont match
+///////REGISTER / LOGIN FETCH SEND TO handle_comments.php from main js fetch ////////////////////////////////////////////////////////
+/// different paths from fetch in blogs and index pages
+
+//REGISTER send post to API//
 const theRegisterForm = document.getElementById('registerForm');
 const submitRegistrationBtn = document.getElementById('submitRegistration');
 
-submitRegistrationBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+submitRegistrationBtn.addEventListener('click', () => {
+
 
     console.log('clicked reg submit btn');
     let data = new FormData();
@@ -58,13 +63,51 @@ submitRegistrationBtn.addEventListener('click', (e) => {
     data.append('password', theRegisterForm.registerPassword.value);
 
 
-    fetch('./handle_comments.php', {
+    fetch('../header.php', {
         method: 'POST',
         body: data
     })
     // .then(res => { console.log('the response ', res); res.json(); })
     // .then(theRes => { console.log('the res ', theRes) })
+})
+
+
+//LOGIN send post to API//
+const submitLoginBtn = document.getElementById('submitLogin');
+// already declaired..  const loginForm = document.getElementById('loginForm');
+
+submitLoginBtn.addEventListener('click', () => {
+
+    let data = new FormData();
+    data.append('submitLoginBtn', submitLoginBtn);
+    data.append('username', loginForm.loginUsername.value);
+    data.append('password', loginForm.loginPassword.value);
+
+    fetch('../header.php', {
+        method: 'POST',
+        body: data
+    })
 
 
 
 })
+
+
+//LOGOUT////////////////////////////////////////////////
+
+const logoutBtn = document.querySelector('.logOutBtn');
+if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+        let data = new FormData();
+        data.append('logoutBtn', logoutBtn);
+
+        fetch('../header.php', {//
+            method: 'POST',
+            body: data
+        })
+
+
+
+
+    })
+}

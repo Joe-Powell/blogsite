@@ -82,6 +82,11 @@ nav ul .btns li {
 
 
 /*  for the buttons in the NAVBAR */
+.logOutBtn {
+    color: red;
+    
+}
+
 .loginToggle, .signUpToggle {
     
      width:fit-content;

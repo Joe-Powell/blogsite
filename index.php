@@ -72,8 +72,7 @@
     <h2></h2>
     <div class="overlay">
       <h4>Learn how build a PHP login/Registration system from scratch step by step. 
-        Just the basics without much security measures or form validation much 
-        so you can focus on the fundamentals first.
+      I am using minimum validation here to just focus on the basic code of building a login / registration system. 
         
       </h4>
       <a href='./blogs/phpLogin.php'> Read more</a>

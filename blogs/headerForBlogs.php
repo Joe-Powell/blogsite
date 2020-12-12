@@ -1,3 +1,6 @@
+<?php session_start(); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,23 +36,34 @@
             <a href="../community.php">
                 <li>Community</li>
             </a>
-            <li class='loginToggle'>Login</li>
-            <li class='signUpToggle'>Signup</li>
-        </ul>      
-        
+            <?php if(isset($_SESSION['uid'])){ ?>
+                <form class='logoutForm'>
+            <button type='submit' class='logOutBtn'> Logout</button>
+            </form>
+        <?php  } ?>
+        <?php if(!isset($_SESSION['uid'])){ ?>
+                <div class='btns'>
+                    <li class='loginToggle'>Login</li>
+                    <li class='signUpToggle'>Signup</li>
+                </div>  
+                <?php  } ?>
+        </ul>
+       
+
+        <?php if(isset($message)){ ?>
+            <h4 style='color:red;'><?php echo $message ?></h4>
+        <?php  } ?>
     </nav>
-
-
 
 
     <!--loginRegisterForm"> buttons in navbar header..-------------------------------------------->
 
-    <form class='loginForm ' >
+<form id='loginForm' class='loginForm ' >
   <div class='formContents'>
     <h2>Login</h2> 
     <input type="text" id="loginUsername" name='loginUsername' placeholder="username">
     <input type="password"  id="loginPassword" name='loginPassword' placeholder="Password">
-    <button type="submit"  name='submitLogin'>Submit</button> 
+    <button type="submit" id='submitLogin'  name='submitLogin'>Submit</button> 
     
   </div>
   <i class="fas fa-times"></i>

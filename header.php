@@ -1,3 +1,86 @@
+<?php session_start(); ?>
+
+
+
+<?php
+////////////////////////REGISTER USER INTO DATABASE  /////////////////////////////////////
+require './Database/DB_CONN.php';
+
+if(isset($_POST['submitRegistrationBtn'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if(empty($email) || empty($username) || empty($password)) {
+        $message = "Please fill all fields";
+        header("Location: index.php");
+        exit();
+    }
+
+    $user_check_query = "SELECT * FROM users  WHERE
+     username='$username' OR email='$email' ";
+    $result = $conn->query($user_check_query);
+
+    if($result->num_rows < 1) {
+    $sql= "INSERT INTO users (username, email, password)
+     VALUES ('$username', '$email','$password')";
+    $result = $conn->query($sql);
+    header("Location: community.php");
+    echo "register success! ";
+    }else{
+       
+        $message = "user taken please try again";
+        echo "register Failure ";
+    }
+}
+
+
+
+
+////////////////LOGIN USER ////////////////////////////////////
+
+if (isset($_POST['submitLoginBtn'])) {
+    require './Database/DB_CONN.php';
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+
+    $sql="SELECT * FROM users WHERE username ='$username' AND password='$password' ";
+    $result = $conn->query($sql);
+    $user =  $result->fetch_assoc();
+
+    if(mysqli_num_rows($result) === 1) {
+        $_SESSION['uid'] = $user['id'];
+        $message = "Login Sucessful";
+        echo "Login Sucessful hello user " .$_SESSION['uid'];
+    }else{
+        $message = "Login Failure";
+        echo 'the login is not correct';
+    }
+
+}
+
+
+///LOGOUT ////////
+if(isset($_POST['logoutBtn'])) {
+    session_unset();
+    session_destroy();
+    header('Location: ./index.php');
+
+
+
+
+}
+
+
+
+
+
+
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,22 +112,34 @@
             <a href="community.php">
                 <li>Community</li>
             </a>
+            <?php if(isset($_SESSION['uid'])){ ?>
+                <form class='logoutForm'>
+            <button type='submit' class='logOutBtn'> Logout</button>
+            </form>
+        <?php  } ?>
+        <?php if(!isset($_SESSION['uid'])){ ?>
                 <div class='btns'>
                     <li class='loginToggle'>Login</li>
                     <li class='signUpToggle'>Signup</li>
                 </div>  
+                <?php  } ?>
         </ul>
+       
+
+        <?php if(isset($message)){ ?>
+            <h4 style='color:red;'><?php echo $message ?></h4>
+        <?php  } ?>
     </nav>
 
 
     <!--loginRegisterForm"> buttons in navbar header..-------------------------------------------->
 
-<form class='loginForm ' >
+<form id='loginForm' class='loginForm ' >
   <div class='formContents'>
     <h2>Login</h2> 
     <input type="text" id="loginUsername" name='loginUsername' placeholder="username">
     <input type="password"  id="loginPassword" name='loginPassword' placeholder="Password">
-    <button type="submit"  name='submitLogin'>Submit</button> 
+    <button type="submit" id='submitLogin'  name='submitLogin'>Submit</button> 
     
   </div>
   <i class="fas fa-times"></i>

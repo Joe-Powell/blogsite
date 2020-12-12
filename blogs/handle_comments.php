@@ -40,18 +40,47 @@ if(isset($_POST['submitRegistrationBtn'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    if(empty($email) || empty($username) || empty($password)) {
+        $message = "Please fill all fields";
+        header("Location: index.php");
+        exit();
+    }
+
+    $user_check_query = "SELECT * FROM users  WHERE
+     username='$username' OR email='$email' ";
+    $result = $conn->query($user_check_query);
+
+    if($result->num_rows < 1) {
     $sql= "INSERT INTO users (username, email, password)
      VALUES ('$username', '$email','$password')";
     $result = $conn->query($sql);
+    }else{
+        header("Location: index.php");
+        exit(); 
+    }
+}
 
 
 
+
+////////////////LOGIN USER ////////////////////////////////////
+
+if (isset($_POST['submitLoginBtn'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+
+    $sql="SELECT * FROM users WHERE username ='$username' AND password='$password' ";
+    $result = $conn->query($sql);
+    $user =  $result->fetch_assoc();
+
+    if(mysqli_num_rows($result) === 1) {
+        $_SESSION['uid'] = $user['id'];
+    }
 
 
 
 }
-
-
 
 
 
