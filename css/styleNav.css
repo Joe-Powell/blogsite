@@ -5,9 +5,16 @@
     padding:0;
 }
 
+body {
+    margin-top:150px;
+}
+
 
 
 nav {
+    position: fixed;
+    z-index: 2;
+    top:0;
  display: inline-block;
  background: #03a9f4;
  height:100px;
@@ -30,6 +37,7 @@ nav {
 nav h2 {
   padding-left:10px;
   padding-bottom: 10px;
+  padding-top: 7px;
   font-size: 30px;
   color:rgb(74, 90, 74);
 
@@ -46,7 +54,7 @@ nav ul {
     width: 100vw;
     padding:0px 20px 0px 0px;
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     }
 
 .navLinks {
@@ -83,7 +91,7 @@ nav ion-icon {
     display: none;
     background: #03a9f4;
     color: black;
-   
+   margin-left: 15px;
     width: 35px;
     font-size: 30px;
 }
@@ -174,29 +182,19 @@ nav {
        
        
     nav h2 {
+     
+ 
+  
+
+
+        padding-left:2px;
+        padding-bottom: 10px;
+        padding-top: 7px;
         font-size: 20px;
-    display: inline-block;
-    background:#03a9f4;
-    padding-left:3px;
-        width: fit-content;
+        color:rgb(74, 90, 74);
 
     }
        
-       
-    nav ul {
-    width: 100%;
-    padding-left:10px;
-    display:block;  
-      
-       }
-
-    nav ul a li{
-        display: block;
-        width:fit-content;
-        color:orange;
-        text-decoration:none;
-       
-       }
 
 
     nav ul .btns {
@@ -223,6 +221,8 @@ nav {
         color:black;
         width:35px;
         font-size:30px;
+        margin-left: 8px;
+   
        
     }
 
@@ -404,13 +404,7 @@ nav {
 
     @media screen and (max-width: 450px) {
 
-        nav ul a li{
-            display: block;
-            width:fit-content;
-            color:orange;
-            text-decoration:none;
-            
-            }
+      
     
     
     
