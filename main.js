@@ -27,12 +27,14 @@ const loginForm = document.querySelector('.loginForm');
 const registerForm = document.querySelector('.registerForm');
 const XoutOfLogin = document.querySelector('.loginForm .fa-times');
 const XoutOfRegister = document.querySelector('.registerForm .fa-times');
+const loginUsername = document.querySelector('#loginUsername');
+const registerUsername = document.querySelector('#registerUsername');
 
 
 // if else because they dissapear when logged in and BRINGS UP ERROR....
 if (loginToggle && signUpToggle) {
-    loginToggle.addEventListener('click', () => { loginForm.classList.toggle('loginFormToggle'); loginForm.classList.toggle('loginForm') })
-    signUpToggle.addEventListener('click', () => { registerForm.classList.toggle('registerFormToggle'); registerForm.classList.toggle('registerForm') })
+    loginToggle.addEventListener('click', () => { loginForm.classList.toggle('loginFormToggle'); loginForm.classList.toggle('loginForm'); loginUsername.focus(); })
+    signUpToggle.addEventListener('click', () => { registerForm.classList.toggle('registerFormToggle'); registerForm.classList.toggle('registerForm'); registerUsername.focus(); })
 }
 
 XoutOfLogin.addEventListener('click', () => { loginForm.classList.toggle('loginFormToggle'); loginForm.classList.toggle('loginForm') })

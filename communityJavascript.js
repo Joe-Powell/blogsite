@@ -19,12 +19,12 @@ submitCommentBtn.addEventListener('click', (e) => {
 
         //e.preventDefault() //when testing I used this...
 
-        fetch('./community.php', {
-            method: 'POST',
-            body: data
-        })
-            .then(res => { res.json() })
-            .then(theRes => { console.log(theRes) })
+        // fetch('./community.php', {
+        //     method: 'POST',
+        //     body: data
+        // })
+        //     .then(res => { res.json() })
+        //     .then(theRes => { console.log(theRes) })
 
     } else {
         e.preventDefault()
@@ -60,10 +60,10 @@ for (let i = 0; i < editCommBtn.length; i++) {
 
 
 ///////////////////////UPDATE POST FROM COMMUNITY.PHP//////////////////////////////////////////
-
+// STill need for form validation so wont submit and also gives an alert..... too slow with fetch 
 
 const submitUpdateBtn = document.querySelectorAll('.submitUpdateBtn');
-//const commEditForm = document.querySelectorAll('.commEditForm');
+//const commEditForm = document.querySelectorAll('.commEditForm');  already declaired
 
 for (let i = 0; i < submitUpdateBtn.length; i++) {
     submitUpdateBtn[i].addEventListener('click', (e) => {
@@ -73,12 +73,12 @@ for (let i = 0; i < submitUpdateBtn.length; i++) {
         data.append('thePostIdToUpdate', commEditForm[i].thePostIdToUpdate.value);
         if (commEditForm[i].update.value !== '') {
 
-            fetch('./community.php', {
-                method: 'POST',
-                body: data
-            })
-                .then(res => { res.json() })
-                .then(theRes => { console.log(theRes) })
+            // fetch('./community.php', {
+            //     method: 'POST',
+            //     body: data
+            // })
+            //     .then(res => { res.json() })
+            //     .then(theRes => { console.log(theRes) })
 
         } else {
             e.preventDefault()
@@ -105,10 +105,10 @@ for (let i = 0; i < deletePostBtn.length; i++) {
         let data = new FormData();
         data.append('deleteThisPostId', commEditForm[i].thePostIdToUpdate.value);
 
-        fetch('./community.php', {
-            method: 'POST',
-            body: data
-        })
+        // fetch('./community.php', {
+        //     method: 'POST',              NOT USING TOO SLOW
+        //     body: data
+        // })
 
     })
 
