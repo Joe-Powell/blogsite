@@ -6,7 +6,10 @@
 <?php
     
     require './Database/DB_CONN.php';
+   
     
+
+////  POST COMMENT   /////////////////////////////////////////////////////////////////////////
     if(isset($_POST['comment'])) {
         $comment = $_POST['comment'];
         $userid = $_POST['userid'];
@@ -34,7 +37,55 @@
     
         }
 
-    }     
+    }  
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+///////////////UPDATE ////////////////////////////////////////////////////////////////////
+    if(isset($_POST['updateValue'])) {
+        $updateValue = $_POST['updateValue'];
+        $thePostIdToUpdate = $_POST['thePostIdToUpdate'];
+
+        $sql = "UPDATE comment_table SET comment='$updateValue' WHERE id='$thePostIdToUpdate' ";
+         $conn->query($sql);    
+        
+
+
+    }
+    
+ ///////////////////////////////////////////////////////////////////////////////////////////
+ 
+
+
+
+
+
+ 
+ //////////DELETE   vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+if(isset($_POST['deleteThisPostId'])) {
+ $deleteThisPostId= $_POST['deleteThisPostId'];
+
+$sql = "DELETE  FROM comment_table Where id = '$deleteThisPostId' ";
+ $conn->query($sql);  
+
+
+
+
+
+}
+
+
+
+
+ //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 
 ?>
@@ -74,20 +125,22 @@ so we say, if the current _$session['uid'] == $comments['userid'] then display e
 
 while($comments = $result->fetch_assoc()) { ?>
 <div class='commentContainer'>
-    <h3><?php echo $comments['name']; ?></h3>
-    <p class='date'><?php echo $comments['date']; ?></p><br>
-   
-    <!-- <p><?php // echo $comments['userid']; ?></p> -->
+    <h3><?php echo $comments['name']; ?></h3><br><br>
     <p><?php echo $comments['comment']; ?></p>
+    <p class='date'><?php echo $comments['date']; ?></p>
 
     <?php if(isset($_SESSION['uid']) && $_SESSION['uid'] == $comments['userid']) { ?>
         <h4 class='editCommBtn'>Edit</h4>
     <?php }  ?>
 
+        <!-- This is the update form with the post id hidden and comment to update -->
+
     <form id='commEditForm' class='toggleForm'> 
         <i class="far fa-times-circle"></i>
+        <input type='hidden' name='thePostIdToUpdate' value='<?php echo $comments['id']; ?>'>
         <input class='updateInputField' name='update' type='text' value='<?php echo $comments['comment']; ?>'> 
         <input class='submitUpdateBtn' type='submit' value='Update'>
+        <input  name='delete' type='submit' class='deletePostBtn' value='Delete'></button>
     </form> 
 
 </div>   

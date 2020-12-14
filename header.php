@@ -99,39 +99,47 @@ if(isset($_POST['logoutBtn'])) {
 </head>
 
 <body>
+
     <nav>
-        
-        
         <div class="topRow">
-        <h2>Code<span>Driven</span></h2>
-        <div>
-        <ion-icon id='menuNav' name="menu-outline"></ion-icon>
+            <h2>Code<span>Driven</span></h2>
 
-        <?php if(isset($_SESSION['uid'])){ ?>
-            <form class='logoutForm'>
-                <button type='submit' class='logOutBtn'> Logout</button>
-            </form>
-        <?php  } ?>
-        </div>
+            <div class= 'burgerContainer'>
+              
 
-        </div>
-        <ul id="nav">
-            <a href='index.php'>
-                <li>Home</li>
-            </a>
-            <a href="about.php">
-                <li>About</li>
-            </a>
-            <a href="community.php">
-                <li>Community</li>
-            </a>
-          
-        <?php if(!isset($_SESSION['uid'])){ ?>
-                <div class='btns'>
-                    <li class='loginToggle'>Login</li>
-                    <li class='signUpToggle'>Signup</li>
-                </div>  
+                <?php if(!isset($_SESSION['uid'])){ ?>
+                    <div class='btns'>
+                        <li class='loginToggle'>Login</li>
+                        <li class='signUpToggle'>Signup</li>
+                    </div>  
                 <?php  } ?>
+                
+                <ion-icon id='menuNav' name="menu-outline"></ion-icon>
+
+                <?php if(isset($_SESSION['uid'])){ ?>
+                <form class='logoutForm'>
+                    <button type='submit' class='logOutBtn'> Logout</button>
+                </form>
+            <?php  } ?>
+
+                
+            </div>
+
+        </div>
+
+        <ul id="nav">
+            <div class="navLinks">
+                <a href='index.php'>
+                    <li>Home</li>
+                </a>
+                <a href="about.php">
+                    <li>About</li>
+                </a>
+                <a href="community.php">
+                    <li>Community</li>
+                </a>
+            </div>
+          
         </ul>
        
 

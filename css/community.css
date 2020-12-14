@@ -29,6 +29,7 @@ body {
     border:none;
     background-color: #03A9f4;
     color: white;
+    cursor: pointer;
 }
 
 .commentsContainerAll {
@@ -51,9 +52,14 @@ margin:0px 0px 16px 0px;
 }
 
 .date {
-    font-size: small;
+    font-size: 10px;
+    color:rgb(132, 51, 224);
 }
 
+.fa-times-circle {
+    cursor: pointer;
+
+}
 
 .editCommBtn {
     color:red;
@@ -61,6 +67,8 @@ margin:0px 0px 16px 0px;
     text-align: right;
     padding-right: 10px;
     transition: 2s;
+    cursor: pointer;
+    
 }
 
 .updateInputField {
@@ -77,6 +85,18 @@ margin:0px 0px 16px 0px;
     border:none;
     background-color: #03A9f4;
     color: white;
+    cursor: pointer;
+
+}
+
+.deletePostBtn {
+    height: 24px;
+    padding: 2px 4px;
+    margin-left: 5px;
+    border:none;
+    background-color: #d31d09;
+    color: white;
+    cursor: pointer;
 
 }
 

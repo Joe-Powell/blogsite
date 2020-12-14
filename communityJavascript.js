@@ -26,16 +26,9 @@ submitCommentBtn.addEventListener('click', (e) => {
             .then(res => { res.json() })
             .then(theRes => { console.log(theRes) })
 
-
-
-
-
-
-
-
     } else {
         e.preventDefault()
-        alert("Please Fill All Required Field");
+        alert("Please Fill All Required Fields");
     }
 
 })
@@ -66,4 +59,58 @@ for (let i = 0; i < editCommBtn.length; i++) {
 
 
 
+///////////////////////UPDATE POST FROM COMMUNITY.PHP//////////////////////////////////////////
+
+
+const submitUpdateBtn = document.querySelectorAll('.submitUpdateBtn');
+//const commEditForm = document.querySelectorAll('.commEditForm');
+
+for (let i = 0; i < submitUpdateBtn.length; i++) {
+    submitUpdateBtn[i].addEventListener('click', (e) => {
+
+        let data = new FormData();
+        data.append('updateValue', commEditForm[i].update.value);
+        data.append('thePostIdToUpdate', commEditForm[i].thePostIdToUpdate.value);
+        if (commEditForm[i].update.value !== '') {
+
+            fetch('./community.php', {
+                method: 'POST',
+                body: data
+            })
+                .then(res => { res.json() })
+                .then(theRes => { console.log(theRes) })
+
+        } else {
+            e.preventDefault()
+            alert("Please Fill All Required Fields");
+        }
+
+    })
+
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+///HANDLE DELETE.  WHEN YOU CLICK ON DELETE BUTTON/////////////////////////////
+
+const deletePostBtn = document.querySelectorAll('.deletePostBtn');
+
+for (let i = 0; i < deletePostBtn.length; i++) {
+    deletePostBtn[i].addEventListener('click', () => {
+        let data = new FormData();
+        data.append('deleteThisPostId', commEditForm[i].thePostIdToUpdate.value);
+
+        fetch('./community.php', {
+            method: 'POST',
+            body: data
+        })
+
+    })
+
+}
 
