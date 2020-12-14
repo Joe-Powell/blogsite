@@ -113,14 +113,16 @@ if(isset($_POST['logoutBtn'])) {
                         <li class='signUpToggle'>Signup</li>
                     </div>  
                 <?php  } ?>
-                
-                <ion-icon id='menuNav' name="menu-outline"></ion-icon>
 
                 <?php if(isset($_SESSION['uid'])){ ?>
                 <form class='logoutForm'>
                     <button type='submit' class='logOutBtn'> Logout</button>
                 </form>
             <?php  } ?>
+                
+                <ion-icon id='menuNav' name="menu-outline"></ion-icon>
+
+               
 
                 
             </div>

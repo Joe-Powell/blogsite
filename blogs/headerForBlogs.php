@@ -44,7 +44,7 @@ th header.php. header.php will be the API to handle the javascript fetch request
                     </div>  
                 <?php  } ?>
                 
-                <ion-icon id='menuNav' name="menu-outline"></ion-icon>
+              
 
                 <?php if(isset($_SESSION['uid'])){ ?>
                 <form class='logoutForm'>
@@ -52,7 +52,7 @@ th header.php. header.php will be the API to handle the javascript fetch request
                 </form>
             <?php  } ?>
 
-                
+            <ion-icon id='menuNav' name="menu-outline"></ion-icon>   
             </div>
 
         </div>
