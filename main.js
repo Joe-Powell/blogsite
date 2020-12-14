@@ -3,7 +3,7 @@
 $(document).ready(() => {
 
     $('#menuNav').on('click', () => {
-        $('#nav').slideToggle(1000);
+        $('#navUl').slideToggle(1000);
     });
 
 });

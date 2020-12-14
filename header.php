@@ -127,7 +127,7 @@ if(isset($_POST['logoutBtn'])) {
 
         </div>
 
-        <ul id="nav">
+        <ul id="navUl">
             <div class="navLinks">
                 <a href='index.php'>
                     <li>Home</li>
