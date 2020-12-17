@@ -69,7 +69,7 @@ margin:16px auto;
 .editCommBtn {
     display: inline-block;
     color:red;
-    width: 40%;
+    width: 5%;
     text-align: right;
     padding-right: 10px;
     transition: 2s;
@@ -81,7 +81,7 @@ margin:16px auto;
     border:none;
     outline: none;
     padding: 6px;
-    margin-top:10px;
+     margin-top:10px;
     background: #eeeeee;
 
     width:300px;
@@ -135,12 +135,12 @@ margin:16px auto;
     .updateInputField {
         border:none;
         outline: none;
-        padding: 4px;
+        padding: 6px;
         margin: auto;
         margin-top:12px;
         background: #eeeeee;
     
-        width:250px;
+        width:100%;
         height: 100px;
         resize: none;
           
@@ -150,7 +150,7 @@ margin:16px auto;
     .deletePostBtn {
         height: 24px;
         padding: 2px 4px;
-        margin-left: 50%;
+        margin-left: 0%;
         border:none;
         background-color: #d31d09;
         color: white;
