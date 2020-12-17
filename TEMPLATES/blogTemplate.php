@@ -1,5 +1,5 @@
 <?php include './headerForBlogs.php'; ?>
-<link rel="stylesheet" href="../css/Project.css">
+<link rel="stylesheet" href="../css/">
 
 
 <div class="image" alt='#'></div>

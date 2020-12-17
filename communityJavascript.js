@@ -37,18 +37,23 @@ submitCommentBtn.addEventListener('click', (e) => {
 ////////////////EDIT BUTTON //////////////////////////////////////////
 
 const editCommBtn = document.querySelectorAll('.editCommBtn');
-const commEditForm = document.querySelectorAll('#commEditForm')
-const exitIcon = document.querySelectorAll('.fa-times-circle')
-const updateInputField = document.querySelectorAll('.updateInputField')
+const commEditForm = document.querySelectorAll('#commEditForm');
+const updateInputField = document.querySelectorAll('.updateInputField');
+
+
+
+
+
 for (let i = 0; i < editCommBtn.length; i++) {
+
+
+
     editCommBtn[i].addEventListener('click', () => {
         commEditForm[i].classList.toggle('toggleForm');
         updateInputField[i].focus();
     })
 
-    exitIcon[i].addEventListener('click', () => {
-        commEditForm[i].classList.toggle('toggleForm');
-    })
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,3 +1,19 @@
 
 
-http://localhost/blogSite/
+http://localhost/blogSite/ 
+
+
+
+
+this site has html css, media  queries,  javascript, php. It uses highlight.js for a code reference tutorial,
+ it has mysqli, OOP, prepaired statements, Registration system made from scratch  as well as Login, SQL querries,
+ javascript form validation, regular expressions, CRUD, dtabase interaction, Fetch API for login, logout and register in main.js,  
+ both headers
+
+ main.js and blogmain.js will preventDefault() if criteria is not met
+
+
+ ***in JAVASCRIPTS main and blogmain, just the fetch is different because different paths...
+
+*** in headers, the link in headers to css is different, and footers afe different paths also. owever header and header for blogs both send to header.php for php
+*** in header the nav is a little different becaus epaths also
