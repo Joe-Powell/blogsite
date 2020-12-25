@@ -69,9 +69,8 @@ margin:16px auto;
 .editCommBtn {
     display: inline-block;
     color:red;
-    width: 5%;
+    width: 40%;
     text-align: right;
-    padding-right: 10px;
     transition: 2s;
     cursor: pointer;
     

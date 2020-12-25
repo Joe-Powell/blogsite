@@ -2,12 +2,12 @@
 <link rel="stylesheet" href="../css/javascriptFormValidations.css">
 <div class="containBlog">
 
-    
-<h2> Here are some key form validations with javaScript</h2>
 
-<pre class='thePre'><code class="javascript"> 
+    <h2> Here are some key form validations with javaScript</h2>
 
-const theRegisterForm = document.getElementById('registerForm');
+    <pre class='thePre'><code class="javascript"> 
+
+const registerForm = document.getElementById('registerForm');
 const submitRegistrationBtn = document.getElementById('submitRegistration');
 
 submitRegistrationBtn.addEventListener('click', (e) => {
@@ -36,30 +36,16 @@ submitRegistrationBtn.addEventListener('click', (e) => {
         registerForm.registerPassword.focus();
        
       }
-    else {
-        // If pass all tests... do what you want. here I send to php API
-        let data = new FormData();
-        data.append('submitRegistrationBtn', submitRegistrationBtn);
-        data.append('username', theRegisterForm.registerUsername.value);
-        data.append('email', theRegisterForm.email.value);
-        data.append('password', theRegisterForm.registerPassword.value);
-        
-        fetch('./header.php', {
-            method: 'POST',
-            body: data
-        })
-       
-
-    }
+   
 })
 </code></pre>
 
-<p>
-First put the regex in a variable, make conditionals, use the .test() method which gives back true or false.
-if ! not true, then it will push a message to the form afte preventing a submission using e.peventDefault(). 
+    <p>
+        First put the regex in a variable, make conditionals, use the .test() method which gives back true or false.
+        if ! not true, then it will push a message to the form afte preventing a submission using e.peventDefault().
 
 
-</p>
+    </p>
 
 </div>
 
@@ -74,12 +60,3 @@ if ! not true, then it will push a message to the form afte preventing a submiss
 
 
 <?php include 'footerForBlogs.php'; ?>
-
-
-
-
-
-
-
-
-
