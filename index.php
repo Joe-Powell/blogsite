@@ -87,7 +87,9 @@
     <h2></h2>
     <div class="overlay">
       <h4>
-        Here is some reference code withsome basic concepts of php crud operations with code snippets to copy and edit.
+        Here is some reference code with some basic bare bone concepts of php crud operations.
+        There are code snippets to copy and edit.
+
 
       </h4>
       <a href='./blogs/phpCrudOperations.php'> Read more </a>
