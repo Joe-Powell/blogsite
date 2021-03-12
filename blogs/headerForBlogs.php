@@ -22,6 +22,8 @@ th header.php. header.php will be the API to handle the javascript fetch request
     </script>
 
     <!-- this link you change the href from cdnjs.com make sure it has css at end.. they start after the .js-->
+    <!-- https://cdnjs.com/libraries/highlight.js   in each blog just make the link below to overwrite this default -->
+    <!-- you can go to highlightjs.org to see the different styles -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/vs2015.min.css">
 
 

@@ -28,7 +28,8 @@
 }
 
 .main {
-    margin-bottom: 7px;
+    margin: 7px;
+    line-height: 30px;
 }
 
 .thePre {

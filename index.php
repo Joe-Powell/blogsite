@@ -100,6 +100,20 @@
 
 
   <div class="parent">
+    <h1><i class="fab fa-php"></i> PHP Upload images </h1>
+    <h2></h2>
+    <div class="overlay">
+      <h4>
+        This is some reference to upload images with php
+      </h4>
+      <a href='./blogs/phpUploadImages.php'> Read more </a>
+    </div>
+
+
+  </div>
+
+
+  <div class="parent">
     <h1>Visual studio Shortcuts</h1>
     <h2></h2>
     <div class="overlay">
@@ -107,6 +121,18 @@
         Here are some of my favorite shortcuts when using Visual Studio help you speed things up.
       </h4>
       <a href='./blogs/visualStudioShortcuts.php'> Read more </a>
+    </div>
+
+
+  </div>
+  <div class="parent">
+    <h1>Node.js with express</h1>
+    <h2></h2>
+    <div class="overlay">
+      <h4>
+        Let's get node.js and express workin gon our local machine
+      </h4>
+      <a href='./blogs/nodeGettingStarted.php'> Read more </a>
     </div>
 
 
